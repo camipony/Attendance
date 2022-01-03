@@ -1,0 +1,12 @@
+body{
+    background: linear-gradient(to bottom, rgba(158, 4, 189, 0.801), rgba(176, 52, 180, 0.781), rgba(0, 145, 94, 0.918)), 
+                linear-gradient(to right, rgba(101, 3, 114, 0.925), rgba(255, 3, 234, 0.822), rgba(7, 54, 85, 0.795));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    text-align: center;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
