@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    .table {
+        margin: auto;
+        position: relative;
+        top: 80%;
+        width: 100px;
+        background-color: rgba(255, 255, 255, 0.336);
+    }
+
+    .nav {
+        text-decoration-color: antiquewhite;
+    }
+
+    .navbar {
+        height: 60px;
+    }
+
+    /* Navbar links */
+    .navbar a {
+        float: left;
+        text-align: center;
+        padding: 5px;
+        border-radius: 2em;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    /* Navbar links on mouse-over */
+    .navbar a:hover {
+        background-color: rgba(253, 253, 253, 0.61);
+    }
+
+    body {
+        text-align: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+    }
+
+    input {
+        margin: 25px 0 8px 0;
+    }
+
+    #box {
+        border-radius: 20px 10px 50px 30px;
+        -webkit-border-radius: 20px 20px 20px 20px;
+        -moz-border-radius: 20px 20px 20px 20px;
+        border: 10px double;
+        width: 300px;
+        height: 400px;
+        color:rgb(44, 44, 44);
+
+    }
+
+    form{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+    }
+
+    p{
+        font-size: 22px;
+        color:rgba(0, 0, 0, 0.87);
+        font-family:Georgia, 'Times New Roman', Times, serif
+    }
+    .center {
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    a{
+        color: rgb(25, 0, 255);
+        margin: 10px;
+    }
+
+    button{
+        margin: 20px;
+    }
+
+    /* Current/active navbar link */
+    .active {
+        background-color: rgba(247, 92, 92, 0.61);
+    }
+
+    /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+    @media screen and (max-width: 500px) {
+        .navbar a {
+            float: none;
+            display: block;
+        }
+    }
+</style>
+<body>
+    <nav class="navbar navbar-dark bg-danger">
+        <div class="navbar-brand mx-auto">Bienvenido a Attendance</div>
+    </nav>
+    <div class="center">
+        <div id="box">
+            <p> Ingresar </p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Univalle.svg" width="80"/>
+            <form action="/users/login" method="POST">
+                <div>
+                    <input type="email" id="email" name="email" placeholder="Email" required />
+                </div>
+                <div>
+                    <input type="password" id="password" name="password" placeholder="Password" required />
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline-danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                    </svg>Ingresar</button>
+                </div>
+        </div>
+    </div>
+    </form>
+</body>
+</div>
+</body>
+
+</html>

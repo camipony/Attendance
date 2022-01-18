@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Personal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .table {
+        margin: auto;
+        width: 80% !important;
+    }
+
+    body{
+        height: 100%;
+        overflow-x: hidden;
+        text-align: center;
+    }
+
+    .navbar{
+        height: 60px;
+    }
+
+    /* Navbar links */
+    .navbar a {
+        float: left;
+        text-align: center;
+        padding: 5px;
+        border-radius: 2em;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    /* Navbar links on mouse-over */
+    .navbar a:hover {
+        background-color: rgba(253, 253, 253, 0.61);
+    }
+
+    /* Current/active navbar link */
+    .active {
+        background-color: rgba(247, 92, 92, 0.61);
+    }
+
+    /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+    @media screen and (max-width: 500px) {
+        .navbar a {
+            float: none;
+            display: block;
+        }
+    }
+</style>
+<body>
+    <nav class="navbar navbar-dark bg-danger mx-auto ml-auto">
+        <div class="navbar-brand mx-auto">Personal</div>
+    </nav>
+    <div class="navbar">
+        <button type="button" onclick= "location.href='/home';" class="btn btn-outline-danger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"></path>
+        <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"></path>
+        </svg></div>
+    <div class="row">
+        <div class="col text-center">
+            <table class="table table-striped table-bordered">
+                <br></br>
+                <tr>
+                    <th>Id persona</th>
+                    <th>Nombre</th>
+                    <th>Cargo</th>
+                    <th>EPS</th>
+                    <th>ARL</th>
+                    <th>Salario</th>
+                    <th>Direccion</th>
+                </tr>
+                <% for (var i=0; i < person.length; i ++) { %>
+                    <tr>
+                        <td>
+                            <%= person[i].id_persona %>
+                        </td>
+                        <td>
+                            <%= person[i].nombre %>
+                        </td>
+                        <td>
+                            <%= person[i].cargo %>
+                        </td>
+                        <td>
+                            <%= person[i].eps %>
+                        </td>
+                        <td>
+                            <%= person[i].arl %>
+                        </td>
+                        <td>
+                            <%= person[i].salario %>
+                        </td>
+                        <td>
+                            <%= person[i].direccion %>
+                        </td>
+                    </tr>
+                    <% } %>
+            </table>
+        </div>
+</body>
+
+</html>
